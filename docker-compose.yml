@@ -1,0 +1,10 @@
+#Docker compose for python dev
+version: '3.8'
+
+services:
+  loader_service:
+    build: .
+    container_name: L4
+    volumes:
+      - .:/app
+    tty: true  # Mantiene el contenedor en ejecución en segundo plano
